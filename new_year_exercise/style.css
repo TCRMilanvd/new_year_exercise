@@ -3,14 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
 }
+
 body {
   font-family: "Goldman", cursive;
   background-image: url(./img/background.jpeg);
   background-size: cover;
+  margin: 0; /* Voeg dit toe om de standaardmarges te verwijderen */
 }
+
 nav {
   display: flex;
   width: 100%;
@@ -18,66 +22,64 @@ nav {
   min-height: 10vh;
   align-items: center;
   flex-wrap: wrap;
-  margin: auto;
   background: #00a8c7;
   justify-content: space-between;
+  position: fixed;
+  text-align: center;
+  z-index: 100; /* Zorg ervoor dat de navbar bovenop andere elementen staat */
 }
+
 nav ul {
   display: flex;
   align-items: center;
   list-style-type: none;
 }
+
 nav li {
   font-size: 2.5rem;
   padding: 0 4rem 0 4rem;
 }
+
 nav a {
   color: white;
   text-decoration: none;
 }
+
 nav img {
   width: 5vw;
 }
-h1 {
-color: white;
-font-size: 70px;
-text-align: center;
-margin-top: 2.5%;
-}
-h2{
+
+h1, h2, p {
   color: white;
-  font-size: 50px;
+  font-size: 50px; /* Aangepaste grootte om te centreren */
   text-align: center;
-  margin-top: 2.5%; 
-}
-
-p{
-  color: white;
-font-size: 30px;
-text-align: center;
-margin-top: 2.5%;
-
+  margin-top: 2.5%;
 }
 
 .footer {
-  position: fixed;
+  position: absolute; /* Verander van 'fixed' naar 'absolute' */
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: #00a8c7;
   color: white;
   text-align: center;
-  }
-  @font-face {
-    font-family: Goldman;
-    src: url('Goldman-Regular.ttf');
-  }
-    @font-face { 
-     font-family: Goldman-Bold;
-       font-weight: bold; src: url('Goldman-Bold.ttf');
-      }
-    h1,h2,p {
-font-family: Goldman;
+  padding: 20px; /* Voeg wat ruimte toe rond de tekst in de footer */
+}
 
+/* Hieronder voegen we 'float' toe om elementen naast elkaar te positioneren */
+.content {
+  clear: both; /* Zorg ervoor dat er geen elementen naast de content zweven */
+}
 
-    }
+.content h2 {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+.content p {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
